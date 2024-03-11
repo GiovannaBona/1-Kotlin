@@ -1,0 +1,15 @@
+fun main() {
+    val produtos = mapOf("kiwi " to 5, "laranja " to 4 , "uva " to 10)
+    val sacola: MutableMap<String, Int> = mutableMapOf("laranja " to 4 , "uva " to 10) 
+    sacola.put("kiwi ", 5)
+    println(sacola)
+    
+        var soma = 0
+    for ((produto, quantidade) in sacola) {
+        if (produtos.containsKey(produto)) {
+            soma += produtos[produto]!! + quantidade
+        }
+    }
+    
+    println("A soma dos itens na sacola é: $soma")
+}
